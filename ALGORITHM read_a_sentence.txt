@@ -1,0 +1,33 @@
+ALGORITHM read_a_sentence
+
+VAR
+
+charac:CHAR;
+lenght,words,vowels : INTEGER :=0;
+
+BEGIN  
+
+ WHILE (charac <> '.' ) DO
+
+   IF (charac = 'A' or 'a' or 'E' or 'e' or 'I' or 'i' or 'O' or 'o' or 'U' or 'u') THEN
+
+     vowels := vowels +1;
+     lenght := lenght +1;
+  
+   ELSE_IF ( charac = ' ') THEN
+
+      words := words +1;
+      lenght := lenght +1;
+
+  ELSE
+      lenght := lenght +1;
+
+ END_IF
+
+END_WHILE
+
+ Write(lenght);
+ Write(vowels);
+ Write(words);
+
+END
